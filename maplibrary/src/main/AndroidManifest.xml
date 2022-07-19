@@ -2,4 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.swi.maplibrary">
 
+    <application>
+        <activity android:name=".MapViewActivity"></activity>
+    </application>
+
 </manifest>

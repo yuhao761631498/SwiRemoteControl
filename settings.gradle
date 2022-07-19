@@ -1,3 +1,4 @@
+include ':baselibrary'
 include ':maplibrary'
 include ':app'
 rootProject.name = "RemoteControl"
