@@ -23,3 +23,4 @@ app/.gitignore
 app/src/androidTest/java/com/swi/remotecontrol/ExampleInstrumentedTest.java
 gradlew
 gradle.properties
+app/release/
