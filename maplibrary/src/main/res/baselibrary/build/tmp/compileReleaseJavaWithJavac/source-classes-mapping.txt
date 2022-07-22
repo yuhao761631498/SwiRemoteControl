@@ -1,0 +1,4 @@
+com/swi/baselibrary/BaseActivity.java
+ com.swi.baselibrary.BaseActivity
+com/swi/baselibrary/BuildConfig.java
+ com.swi.baselibrary.BuildConfig

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.RemoteControl.FullscreenContainer"
+    tools:context=".mapview.GuideMapFragment">
+
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/tv_normal_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/window_margin_bottom"
+        android:background="@color/light_blue_600"
+        android:padding="@dimen/pf_5x"
+        android:text="@string/normal_map"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_satellite_map"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_satellite_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pf_16x"
+        android:background="@color/light_blue_600"
+        android:padding="@dimen/pf_5x"
+        android:text="@string/satellite_map"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/tv_normal_map"
+        app:layout_constraintTop_toTopOf="@id/tv_normal_map" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

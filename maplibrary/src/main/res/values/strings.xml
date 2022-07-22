@@ -1,1 +1,7 @@
-<resources></resources>
+<resources>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="satellite_map">卫星地图</string>
+    <string name="normal_map">标准地图</string>
+</resources>
