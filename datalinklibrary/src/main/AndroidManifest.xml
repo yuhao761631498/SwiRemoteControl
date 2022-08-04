@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.swi.datalinklibrary">
+
+    <application>
+        <receiver android:name="com.swi.datalinklibrary.aoa.UsbReceiver">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.ACTION_BATTERY_CHANGED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter" />
+
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_DETACHED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+
+</manifest>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/general_dialog"
+    android:layout_width="@dimen/pf_ui_size_536"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_general_round_style"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/general_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pf_ui_size_39"
+        android:gravity="center"
+        android:text="1111111111111111"
+        android:textColor="@color/pf_color_333333"
+        android:textSize="@dimen/pf_text_size_32" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pf_ui_size_38"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:paddingLeft="@dimen/pf_ui_size_46"
+        android:paddingRight="@dimen/pf_ui_size_46"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/general_center_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:text="2222222222222222222222222222222222222222222222"
+            android:textColor="@color/pf_color_696969"
+            android:textSize="@dimen/pf_text_size_28" />
+
+    </ScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pf_ui_size_1"
+        android:layout_marginTop="@dimen/pf_ui_size_35"
+        android:background="@color/pf_color_d2d2d2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pf_ui_size_93"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/general_negative"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Label_cancel"
+            android:textColor="@color/pf_color_333333"
+            android:textSize="@dimen/pf_text_size_30" />
+
+        <View
+            android:id="@+id/view_split_line"
+            android:layout_width="@dimen/pf_ui_size_1"
+            android:layout_height="match_parent"
+            android:background="@color/pf_color_d2d2d2" />
+
+        <TextView
+            android:id="@+id/general_positive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Label_Sure"
+            android:textColor="@color/pf_color_333333"
+            android:textSize="@dimen/pf_text_size_30" />
+    </LinearLayout>
+
+</LinearLayout>

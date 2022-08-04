@@ -1,27 +1,23 @@
 package com.swi.remotecontrol;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.app.ActivityCompat;
 
 import com.amap.api.maps.AMap;
 import com.swi.baselibrary.BaseActivity;
-import com.swi.baselibrary.DisplayUtils;
-import com.swi.baselibrary.GlobalVariable;
 import com.swi.baselibrary.SwitchMapAndSurface;
+import com.swi.commonlibrary.GlobalVariable;
+import com.swi.commonlibrary.YhLog2File;
+import com.swi.commonlibrary.utils.DisplayUtils;
+import com.swi.datalinklibrary.SwiDataLinkManager;
 import com.swi.maplibrary.callback.MapWindowClickCallback;
 import com.swi.maplibrary.mapview.GuideMapFragment;
 
@@ -58,7 +54,6 @@ public class MainActivity extends BaseActivity implements MapWindowClickCallback
         texture_View = findViewById(R.id.texture_View);
         cs_video_content = findViewById(R.id.cs_video_content);
 
-
         guideMapFragment = new GuideMapFragment();
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fr_map_content, guideMapFragment).commit();
@@ -72,16 +67,9 @@ public class MainActivity extends BaseActivity implements MapWindowClickCallback
 
     @Override
     public void initData() {
-
         initGlobal();
 
-        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission_group.LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(MainActivity.this,
-                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION,
-                            Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                            Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
-        }
-
+        SwiDataLinkManager.getInstance().init(MainActivity.this);
     }
 
     private void initGlobal() {
@@ -92,31 +80,6 @@ public class MainActivity extends BaseActivity implements MapWindowClickCallback
         }
     }
 
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-                                           @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case 1:
-                for (int result : grantResults) {
-                    if (result != PackageManager.PERMISSION_GRANTED) {
-                        Toast.makeText(MainActivity.this, "请求位置权限权限被拒绝", Toast.LENGTH_LONG).show();
-                        break;
-                    }
-                }
-                break;
-
-            case 2:
-                for (int result : grantResults) {
-                    if (result != PackageManager.PERMISSION_GRANTED) {
-                        Toast.makeText(MainActivity.this, "请求存储权限被拒绝", Toast.LENGTH_LONG).show();
-                        break;
-                    }
-                }
-                break;
-        }
-    }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
@@ -152,6 +115,8 @@ public class MainActivity extends BaseActivity implements MapWindowClickCallback
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        SwiDataLinkManager.getInstance().onDestroy();
+        YhLog2File.getSingle().stopSave();
         guideMapFragment = null;
     }
 }

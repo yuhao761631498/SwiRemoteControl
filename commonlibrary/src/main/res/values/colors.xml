@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="color33ffffff">#33ffffff</color>
+    <color name="colorRignt">#f1f1f1</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorMyBackground">#f7f7f7</color>
+    <color name="colorMyItemTxt">#2c2c2c</color>
+    <color name="colorMainBottomNoSelect">#bebebe</color>
+    <color name="colorMainBottomSelect">#262626</color>
+    <color name="colorGreen">#00ff00</color>
+    <color name="colorYellow">#ffff00</color>
+    <color name="colorOrange">#FF7E19</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorPurple">#8F3E9A</color>
+    <color name="colorMaroon">#7F0325</color>
+
+    <color name="colorCover">#7f000000</color>
+
+    <color name="colorLayoutHeadBackground">#1b1b1b</color>
+
+    <color name="colorPersonelDetailLabelText">#2c2c2c</color>
+    <color name="colorPersonelDetailValueText">#888888</color>
+
+    <color name="colorChangePwdLabel">#7c7c7c</color>
+    <color name="colorChangePwdValue">#2c2c2c</color>
+
+    <color name="colorBatteryBg">#B2898989</color>
+    <color name="colorBattery_Green">#47e943</color>
+    <color name="colorBattery_Red">#ff4c4c</color>
+    <color name="colorFeedBackTxt">#dbdbdb</color>
+
+    <color name="colorUnLockbg">#e819181a</color>
+    <color name="colorUnLockTxt">#b4b4b4</color>
+
+    <color name="colorSelectConn_btn">#a0abb4</color>
+    <color name="colorSelectCameraModel">#e96226</color>
+
+    <color name="colorSetValue">#898989</color>
+    <color name="colorDevicedivider">#d2d2d2</color>
+    <color name="colorCancel">#333333</color>
+    <color name="colorDroneSetDialogFont">#4a4a4a</color>
+    <color name="colorLoginBtn">#f77339</color>
+    <color name="colorExPloreInditorSelect">#d9d9d9</color>
+
+    <color name="colorProgressFront">#ff8659</color>
+    <color name="colorProgressBg">#c8c8c8</color>
+
+
+    <!--ui color-->
+    <color name="color_vertical_view">#dfdfdf</color>
+    <color name="my_view_color">#e2e2e2</color>
+    <color name="color_progress">#bae131</color>
+    <color name="new_dialog_text_content_color">#ff6000</color>
+    <color name="new_dialog_hint_color">#858585</color>
+
+    <color name="pf_color_f7f7f7">#fff7f7f7</color>
+    <color name="pf_color_7f7f7f">#7f7f7f</color>
+    <color name="pf_color_e2e2e2">#e2e2e2</color>
+    <color name="pf_color_666666">#666666</color>
+    <color name="pf_color_262627">#262627</color>
+    <color name="pf_color_f7f7f8">#f7f7f8</color>
+    <color name="pf_color_a8a8a9">#a8a8a9</color>
+    <color name="pf_color_45494d">#45494d</color>
+    <color name="pf_color_000000">#000000</color>
+    <color name="pf_color_585858">#585858</color>
+    <color name="pf_color_899195">#899195</color>
+    <color name="pf_color_333333">#333333</color>
+    <color name="pf_color_d76623">#d76623</color>
+    <color name="pf_color_696969">#696969</color>
+    <color name="pf_color_17171a">#17171a</color>
+    <color name="pf_color_1d1e20">#1d1e20</color>
+    <color name="pf_color_636363">#636363</color>
+    <color name="pf_color_f1f1f1">#f1f1f1</color>
+    <color name="pf_color_eb4242">#eb4242</color>
+    <color name="pf_color_949494">#949494</color>
+    <color name="pf_color_3e3e3e">#3e3e3e</color>
+    <color name="pf_color_e3e3e3">#e3e3e3</color>
+    <color name="pf_color_535353">#535353</color>
+    <color name="pf_color_313131">#1e1e1e</color>
+    <color name="pf_color_2f2f3e">#2f2f3e</color>
+    <color name="pf_color_4d4d4d">#4d4d4d</color>
+    <color name="pf_color_505050">#505050</color>
+    <color name="pf_color_d23d3d">#d23d3d</color>
+    <color name="pf_color_d3d3d3">#d3d3d3</color>
+    <color name="pf_color_131419">#131419</color>
+    <color name="pf_color_363636">#363636</color>
+    <color name="pf_color_ff7a31">#ff7a31</color>
+    <color name="pf_color_e26105">#e26105</color>
+    <color name="pf_color_1f1f1f">#1f1f1f</color>
+    <color name="pf_color_030303">#030303</color>
+    <color name="pf_color_bdbdbd">#bdbdbd</color>
+    <color name="pf_color_2c2c2c">#2c2c2c</color>
+    <color name="pf_color_626262">#626262</color>
+    <color name="pf_color_d8d8d8">#d8d8d8</color>
+    <color name="pf_color_707070">#707070</color>
+    <color name="pf_color_be5c15">#be5c15</color>
+    <color name="pf_color_fe2f2f">#fe2f2f</color>
+    <color name="pf_color_7B7B7B">#7B7B7B</color>
+    <color name="pf_color_ffa030">#ffa030</color>
+    <color name="pf_color_858585">#858585</color>
+    <color name="pf_color_bcbcbc">#bcbcbc</color>
+    <color name="pf_color_bbbbbb">#bbbbbb</color>
+    <color name="pf_color_d2d2d2">#d2d2d2</color>
+    <color name="pf_color_eeeeee">#eeeeee</color>
+    <color name="pf_color_282828">#282828</color>
+    <color name="pf_color_1b1b1b">#1b1b1b</color>
+    <color name="pf_color_3e4043">#3e4043</color>
+    <color name="pf_color_ffffff">#ffffff</color>
+    <color name="pf_color_ef4e22">#ef4e22</color>
+    <color name="pf_color_565656">#565656</color>
+    <color name="pf_color_77daf7">#77daf7</color>
+    <color name="pf_color_ff901d">#ff901d</color>
+    <color name="pf_color_ff6000">#ff6000</color>
+    <color name="pf_color_b66643">#b66643</color>
+    <color name="pf_color_fefefe">#fefefe</color>
+    <color name="pf_color_c6c6c6">#c6c6c6</color>
+    <color name="pf_color_9a9b98">#9a9b98</color>
+    <color name="pf_color_232428">#232428</color>
+    <color name="pf_color_ff8400">#ff8400</color>
+    <color name="pf_color_f6781d">#f6781d</color>
+    <color name="pf_color_5b5b5b">#5b5b5b</color>
+    <color name="pf_color_262626">#262626</color>
+    <color name="pf_color_b1b1b2">#b1b1b2</color>
+    <color name="pf_color_ed6834">#ed6834</color>
+    <color name="pf_color_dfdfdf">#dfdfdf</color>
+    <color name="pf_color_fe6225">#fe6225</color>
+    <color name="pf_color_9cccee">#9cccee</color>
+    <color name="pf_color_fafafa">#fafafa</color>
+    <color name="pf_color_e8ebed">#e8ebed</color>
+    <color name="pf_color_a5a6a7">#a5a6a7</color>
+    <color name="pf_color_ea9d59">#ea9d59</color>
+    <color name="pf_color_ea9856">#ea9856</color>
+    <color name="pf_color_cccccc">#cccccc</color>
+    <color name="pf_color_c1c1c1">#c1c1c1</color>
+    <color name="pf_color_f48832">#f48832</color>
+    <color name="pf_color_7a7a7a">#7a7a7a</color>
+    <color name="pf_color_dddddd">#dddddd</color>
+    <color name="pf_color_6d6d6e">#6d6d6e</color>
+    <color name="pf_color_cf5a07">#cf5a07</color>
+    <color name="pf_color_adadad">#adadad</color>
+    <color name="pf_color_52555b">#52555b</color>
+    <color name="pf_color_4c4c4c">#4c4c4c</color>
+    <color name="pf_color_d65832">#d65832</color>
+    <color name="pf_color_F5F5F5">#F5F5F5</color>
+    <color name="pf_color_C0C4C7">#C0C4C7</color>
+    <color name="pf_color_bdbdbd1">#bdbdbd</color>
+    <color name="pf_color_0be25c">#0be25c</color>
+    <color name="pf_color_e4e702">#e4e702</color>
+    <color name="pf_color_ff0000">#ff0000</color>
+    <color name="pf_color_00c4d0">#00c4d0</color>
+    <color name="pf_color_0c9bd7">#0c9bd7</color>
+    <color name="pf_color_393939">#393939</color>
+    <color name="pf_color_cd5703">#cd5703</color>
+    <color name="pf_color_24b7b3">#24b7b3</color>
+    <color name="pf_color_e0e0e0">#e0e0e0</color>
+
+
+
+    <!--透明度颜色-->
+    <color name="pf_color_55000000">#55000000</color>
+    <color name="pf_color_55c6c6c6">#55c6c6c6</color>
+    <color name="pf_color_b3ffffff">#b3ffffff</color>
+    <color name="pf_color_33ffffff">#33ffffff</color>
+    <color name="pf_color_60000000">#60000000</color>
+    <color name="pf_color_40000000">#40000000</color>
+    <color name="pf_color_e6000000">#e6000000</color>
+    <color name="pf_color_00000000">#00000000</color>
+    <color name="pf_color_a1000000">#a1000000</color>
+    <color name="pf_color_B3000000">#B3000000</color>
+    <color name="pf_color_80000000">#80000000</color>
+    <color name="pf_color_e62b2b2b">#e62b2b2b</color>
+    <color name="pf_color_cc1e1e1e">#cc1e1e1e</color>
+    <color name="pf_color_80ffffff">#80ffffff</color>
+    <color name="pf_color_e61b1b1b">#e61b1b1b</color>
+    <color name="pf_color_80ff7a31">#80ff7a31</color>
+    <color name="pf_color_ff7918">#ff7918</color>
+    <color name="pf_color_7bff53">#7bff53</color>
+    <color name="pf_color_807bff53">#807bff53</color>
+    <color name="pf_color_ffcc53">#ffcc53</color>
+    <color name="pf_color_80ffcc53">#80ffcc53</color>
+    <color name="pf_color_ff5353">#ff5353</color>
+    <color name="pf_color_80ff5353">#80ff5353</color>
+    <color name="pf_color_66000000">#66000000</color>
+    <color name="pf_color_f3111111">#f3111111</color>
+    <color name="color_B2111111">#B2111111</color>
+    <color name="pf_color_ff9e06">#ff9e06</color>
+    <color name="color_111111">#111111</color>
+    <color name="pf_color_cc6e6e6e">#cc6e6e6e</color>
+    <color name="btg_global_gray">#ff727272</color>
+    <color name="btg_global_black_content">#ff999999</color>
+    <color name="pf_color_b3000000">#b3000000</color>
+    <color name="pf_color_cc000000">#cc000000</color>
+    <color name="pf_color_99000000">#99000000</color>
+    <color name="pf_color_c0000000">#9a696969</color>
+
+    <!--gail add begin -->
+    <color name="color_bottom_text">#ffb453</color>
+    <color name="color_vc_border">#ffc741</color>
+
+    <color name="color_vj_text_gray">#fefefe</color>
+
+    <color name="color_adjust_text">#626262</color>
+    <color name="color_vj_dark_gray">#1b1b1b</color>
+    <color name="color_vj_dark_white">#e1e1e1</color>
+    <color name="color_vj_dark_white2">#e2e2e2</color>
+    <color name="color_divider">#2a2a2a</color>
+    <color name="color_light_gray">#1b1b1b</color>
+    <color name="color_text_red">#fe3b3b</color>
+    <color name="color_bg_alpha">#7f000000</color>
+    <color name="color_progress_gray">#f0f0f0</color>
+    <color name="Transparent">#00000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="line_color">#F1F1F1</color>
+    <color name="rectify_resule">#e97419</color>
+    <color name="progress_end">#f6a553</color>
+
+    <!--gail add end-->
+    <color name="line">#313131</color>
+    <color name="selected_text">#ef4e22</color>
+
+    <!--避障-->
+    <color name="obstacle_green">#00d856</color>
+    <color name="obstacle_yellow">#f8c24e</color>
+    <color name="obstacle_red">#ff4b4b</color>
+
+    <!--手势操作-->
+
+    <!--版本升级-->
+
+    <color name="Track_Width_Color">#60e353</color>
+    <color name="Track_Stroke_Color">#00000000</color>
+
+    <color name="Track_Width_Color_red">#ff0000</color>
+    <color name="Track_Stroke_Color_red">#00000000</color>
+    <!--间隔线的颜色-->
+    <color name="Color_Space_01">#52555b</color>
+    <!--Dialog的背景色-->
+    <color name="Color_BlankDialogBg_01">#cc000000</color>
+    <color name="img_channel_inuse">#00b2df</color>
+    <color name="img_channel_notinuse">#7a7a7a</color>
+    <color name="dialog_color_newuser">#ef4e22</color>
+
+
+    <color name="waveform_selected">#ffffff</color>
+    <color name="waveform_unselected">#ffffff</color>
+    <color name="waveform_unselected_bkgnd_overlay">#40ffffff</color>
+    <color name="selection_border">#ffffff</color>
+    <color name="playback_indicator">#ffff66</color>
+    <color name="grid_line">#66ffffff</color>
+    <color name="timecode">#ddffffdd</color>
+    <color name="timecode_shadow">#aa000000</color>
+
+
+    <color name="lsq_scence_effect_color_LiveShake01">#b3fa7652</color>
+    <color name="lsq_scence_effect_color_LiveMegrim01">#b3f4a11a</color>
+    <color name="lsq_scence_effect_color_EdgeMagic01">#b3fffd50</color>
+    <color name="lsq_scence_effect_color_LiveFancy01_1">#b35bf254</color>
+    <color name="lsq_scence_effect_color_LiveSoulOut01">#b316cefc</color>
+    <color name="lsq_scence_effect_color_LiveSignal01">#b36ea0f2</color>
+    <color name="lsq_scence_effect_color_title">#999999</color>
+    <color name="lsq_filter_title_color">#f4a11a</color>
+    <color name="lsq_filter_title_color_alpha_20">#33f4a11a</color>
+
+
+    <color name="color_f1f1f1">#f1f1f1</color>
+    <color name="colorFont_select_controlModel">#ebebeb</color>
+    <color name="color_noSelect_LandMedia">#474747</color>
+    <color name="color_Select_LandMedia">#ffffff</color>
+    <color name="colorBg_Head_LandMedia">#111111</color>
+    <color name="colorBg_LandMedia">#1b1b1b</color>
+    <color name="colorSpace_LandMedia">#3b3b3b</color>
+    <color name="color_2d2d2d">#2d2d2d</color>
+
+    <color name="color_panorama">#CE5A07</color>
+</resources>

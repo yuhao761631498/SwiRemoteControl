@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--添加Toast弹框-->
+    <LinearLayout
+        android:id="@+id/content_show_toast"
+        android:layout_width="@dimen/Pad_151_Ron"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/Pad_35_Ron"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/pf_ui_size_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_arlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBattery_Red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_agps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBattery_Red"
+            android:textSize="12sp" />
+
+        <!--测试Layout -->
+        <TextView
+            android:id="@+id/tv_shang_lat2lon_text_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBattery_Red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBattery_Red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_WifiQuality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBattery_Red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_NoiseQuality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBattery_Red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_lostPacent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBattery_Red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_rcHadGetPreView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBattery_Red"
+            android:textSize="12sp" />
+    </LinearLayout>
+</merge>

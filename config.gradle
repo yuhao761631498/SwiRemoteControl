@@ -1,0 +1,41 @@
+ext {
+    android = [
+            compileSdkVersion: 32,
+            buildToolsVersion: '30.0.3',
+            minSdkVersion    : 23,
+            targetSdkVersion : 28,
+    ]
+
+    versions = [
+            versionCode: 1,
+            versionName: '1.0'
+    ]
+
+    jar = [
+            groupId      : 'com.gdu',
+            version      : '0.0.2-SNAPSHOT',
+            base_artifact: 'build/outputs/aar/'
+    ]
+
+    configs = [
+            //是否混淆，true为混淆（调试断点不可用）， false不混淆（调试断点可用）
+            userName  : 'admin',
+            password  : 'admin123',
+            isProguard: false,
+    ]
+
+    nexusUrl = [
+            //外网服务器
+            nexusUrlRelease : 'http://127.0.0.1:8081/repository/Releases/',
+            nexusUrlSnapshot: 'http://127.0.0.1:8081/repository/Snapshots/'
+    ]
+
+//    dependencies = [
+//            swznUtil         : project(':SWZNUtil'),
+//            swznModel        : project(':SWZNModel'),
+//            swznClient       : project(':SWZNClient'),
+//            swznRemoteControl: project(':SWZNRC'),
+//            swznFlightRecord : project(':SWZNRecord')
+//    ]
+}
+

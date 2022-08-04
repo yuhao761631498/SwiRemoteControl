@@ -1,0 +1,385 @@
+<resources>
+
+
+    <declare-styleable name="IRecyclerView">
+        <attr name="refreshHeaderLayout" format="reference" />
+        <attr name="loadMoreFooterLayout" format="reference" />
+        <attr name="refreshEnabled" format="boolean" />
+        <attr name="loadMoreEnabled" format="boolean" />
+        <attr name="refreshFinalMoveOffset" format="dimension" />
+    </declare-styleable>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyActivityAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+    </style>
+
+    <style name="MyActivityAppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="android:windowTranslucentStatus">false</item>-->
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+    </style>
+
+    <style name="MyActivityAppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--<item name="colorPrimary">@android:color/black</item>-->
+        <!--<item name="colorPrimaryDark">@android:color/black</item>-->
+    </style>
+
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!--Dialog Style -->
+    <style name="NormalDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!--无标题-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--背景透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--半透明-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--模糊-->
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="droneSetDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+        <!--<item name="android:windowAnimationStyle">@style/mydialog_anim_style</item>-->
+    </style>
+
+
+    <style name="droneSetDialog1" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <!--dialog的全屏模式-->
+    <style name="dialog_Fullscreen" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="dialog_Fullscreen_Translate" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+
+
+    <style name="ImageloadingDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item><!--无边框-->
+        <item name="android:windowNoTitle">true</item><!--没有标题-->
+        <item name="android:windowIsFloating">true</item><!--是否浮在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--背景是否半透明-->
+        <item name="android:windowContentOverlay">@null</item><!--对话框是否有遮盖 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item><!--动画样式-->
+        <item name="android:backgroundDimEnabled">true</item><!--背景是否模糊-->
+    </style>
+
+<!--    <style name="ImageScale" parent="android:Theme.Black.NoTitleBar">-->
+<!--        <item name="android:windowAnimationStyle">@style/AnimHead</item>-->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        &lt;!&ndash; 无标题 &ndash;&gt;-->
+<!--        <item name="android:windowFullscreen">true</item>-->
+<!--        &lt;!&ndash; 设置全屏显示 &ndash;&gt;-->
+<!--        <item name="android:windowFrame">@null</item>-->
+<!--        &lt;!&ndash; 边框 &ndash;&gt;-->
+<!--        <item name="android:windowIsFloating">false</item>-->
+<!--        &lt;!&ndash; 是否浮现在activity之上 &ndash;&gt;-->
+<!--        <item name="android:windowIsTranslucent">true</item>-->
+<!--        &lt;!&ndash; 半透明 &ndash;&gt;-->
+<!--        <item name="android:windowBackground">@android:color/black</item>-->
+<!--        <item name="android:backgroundDimEnabled">false</item>-->
+<!--        &lt;!&ndash; 模糊 &ndash;&gt;-->
+<!--    </style>-->
+
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 将splash图片设置在这，这样这张图片取代白屏 -->
+        <item name="android:windowBackground">@drawable/layout_list_start_pic</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <style name="CustomDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--登录注册输入框-->
+    <style name="TextInputLayout_Text_Style">
+        <item name="android:textSize">@dimen/pf_text_size_20</item>
+        <item name="android:textColor">@color/pf_color_a8a8a9</item>
+    </style>
+
+    <!--媒体库 编辑 分割线 样式-->
+    <style name="Media_Edit_Division_line_Style">
+        <item name="android:layout_height">@dimen/pf_ui_size_1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/pf_color_282828</item>
+    </style>
+    <!--媒体库 编辑照片  编辑 Type 内部 include LinearLayout 样式-->
+    <style name="Media_Edit_Type_LinearLayout_include_Style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/pf_color_1b1b1b</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--shang 媒体库 编辑照片  编辑 Type  LinearLayout 样式-->
+    <style name="Media_Edit_Type_LinearLayout_Style">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/pf_color_000000</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--shang 飞机设置 -飞行设置 ， 样式-->
+    <style name="PlaneSet_Fly_Layout">
+        <item name="android:layout_height">@dimen/pf_ui_size_110</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!--shang 飞机设置 编辑 分割线 样式-->
+    <style name="PlaneSet_Division_line_Style">
+        <item name="android:layout_height">@dimen/pf_ui_size_1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/pf_color_313131</item>
+    </style>
+    <!--shang飞机状态，显示状态 Layout状态-->
+    <style name="PlaneStata_RelativeLayout_Style">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/pf_ui_size_220</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/pf_ui_size_34</item>
+    </style>
+    <!--shang飞机设置 -飞行设置 ， 样式-->
+    <style name="PlaneSet_Controlset_Controlmode_Country_Text_Style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/pf_color_b3ffffff</item>
+        <item name="android:textSize">@dimen/pf_text_size_28</item>
+    </style>
+
+    <style name="PlaneSet_Controlset_Controlmode_Country_Text_Selected_Style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/pf_color_ff8400</item>
+        <item name="android:textSize">@dimen/pf_text_size_38</item>
+    </style>
+
+    <!--shang飞机设置 -飞行设置 ， 样式-->
+    <style name="PlaneSet_tab_division_line">
+        <item name="android:layout_width">@dimen/pf_ui_size_80</item>
+        <item name="android:layout_height">@dimen/pf_ui_size_1</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@color/pf_color_363636</item>
+    </style>
+
+
+
+    <!--shang 所有 layout 分割线-->
+    <style name="Layout_division_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/pf_ui_size_1</item>
+        <item name="android:background">@color/pf_color_bbbbbb</item>
+        <item name="android:layout_marginRight">@dimen/pf_ui_size_32</item>
+        <item name="android:layout_marginLeft">@dimen/pf_ui_size_32</item>
+    </style>
+
+    <!--shang 无人机实名登记 个人信息 登记 样式-->
+    <style name="Register_realname_info_layout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/pf_ui_size_100</item>
+        <item name="android:background">@color/pf_color_f7f7f7</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/pf_ui_size_32</item>
+        <item name="android:paddingRight">@dimen/pf_ui_size_32</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!--shang 无人机实名登记 个人信息 登记 样式-->
+    <style name="Register_realname_info_label_style">
+        <item name="android:layout_width">@dimen/pf_ui_size_180</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/pf_color_333333</item>
+        <item name="android:textSize">@dimen/pf_text_size_28</item>
+    </style>
+
+    <!--shang 无人机实名登记 个人信息 登记 样式-->
+    <style name="Register_realname_info_textview_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorHint">@color/pf_color_d3d3d3</item>
+        <item name="android:textColor">@color/pf_color_333333</item>
+        <item name="android:textSize">@dimen/pf_text_size_28</item>
+    </style>
+    <!--shang 科大语音layout-->
+    <style name="iflytek_what_linearLayout">
+        <item name="android:layout_width">@dimen/pf_ui_size_850</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/pf_ui_size_100</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_marginBottom">@dimen/pf_ui_size_30</item>
+    </style>
+    <!--shang 科大语音layout-->
+    <style name="iflytek_what_imageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/pf_ui_size_44</item>
+    </style>
+    <!--shang 科大语音layout-->
+    <style name="iflytek_what_textView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/pf_color_ffffff</item>
+        <item name="android:textSize">@dimen/pf_text_size_36</item>
+    </style>
+    <!--地址选择器 北京市北京海淀-->
+    <style name="custom_dialog2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+
+
+    <style name="HorizontalDividerTop">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#666677</item>
+    </style>
+
+    <style name="HorizontalDividerBottom">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#000022</item>
+    </style>
+
+    <style name="ToolbarBackground">
+        <item name="android:background">#222233</item>
+    </style>
+
+
+    <style name="tv_style1">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="tv_style2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+
+    <style name="include_title">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+
+    <style name="Theme.FloatActivity" parent="android:style/Theme.Material.Dialog.NoActionBar">
+        <!-- float_box为我们定义的窗口背景 ，这个不是必须的-->
+        <item name="android:layout_weight">@dimen/pf_ui_size_640</item>
+        <item name="android:layout_height">@dimen/pf_ui_size_980</item>
+    </style>
+
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="colorControlActivated">@color/colorWhite</item>
+    </style>
+
+</resources>

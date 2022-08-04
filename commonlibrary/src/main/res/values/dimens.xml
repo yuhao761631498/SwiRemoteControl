@@ -1,0 +1,554 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="pad_my_head_set">20dp</dimen>
+    <dimen name="height_my_head_UserHead">80dp</dimen>
+    <dimen name="fontSize_my_head_name">40sp</dimen>
+
+    <dimen name="pad_my_Collect">20dp</dimen>
+    <dimen name="height_my_Collect">56dp</dimen>
+    <dimen name="textSize_my_Collect">14sp</dimen>
+    <dimen name="height_my_list_item">54dp</dimen>
+
+    <dimen name="padLeft_my_list_item">15dp</dimen>
+    <dimen name="padRight_my_list_item">27dp</dimen>
+    <dimen name="padLeft_my_list_item_txt">14dp</dimen>
+    <dimen name="fontSize_my_list_item_txt">14sp</dimen>
+    <dimen name="marginTop_my_list_item">1dp</dimen>
+
+    <dimen name="marginGuidePoint">10dp</dimen>
+
+    <!--dialog-->
+    <dimen name="dialog_width">300dp</dimen>
+    <dimen name="dialog_height_title">40dp</dimen>
+    <dimen name="dialog_fontSize_title">16sp</dimen>
+    <dimen name="dialog_pad_content">16dp</dimen>
+    <dimen name="dialog_height_bottom">38dp</dimen>
+
+    <dimen name="height_main_bottom">44dp</dimen>
+    <dimen name="fontSize_mainBottom_txt">9sp</dimen>
+    <dimen name="padTop_mainBottom_txt">3dp</dimen>
+
+
+    <dimen name="width_TopicPicture_bottom">150dp</dimen>
+    <dimen name="height_TopicPicture_bottom">32dp</dimen>
+    <dimen name="padBottom_TopicPicture_bottom">28dp</dimen>
+
+    <!--layout_activity_head-->
+    <dimen name="textSize_layout_activity_head_title">16sp</dimen>
+    <dimen name="height_layout_activity_head">39dp</dimen>
+    <dimen name="pad_layout_acitivty_head_back">15dp</dimen>
+
+    <!--activity_personelDetail-->
+    <dimen name="height_personDetail_head_item">70dp</dimen>
+    <dimen name="height_personDetail_other_item">39dp</dimen>
+    <dimen name="height_personDetail_headImg">50dp</dimen>
+    <dimen name="fontSize_personDetail_Label">14sp</dimen>
+    <dimen name="fontSize_personDetail_Value">11sp</dimen>
+    <dimen name="padLeft_personDetail_arrow">15dp</dimen>
+    <dimen name="padRight_personDetail_arrow">16dp</dimen>
+    <dimen name="space_personDetail_1dp">1dp</dimen>
+    <dimen name="space_personDetail_5dp">5dp</dimen>
+
+    <dimen name="height_TopicImg">190dp</dimen>
+
+
+    <!--activity_changePwd-->
+    <dimen name="height_changepwd_Label">31dp</dimen>
+    <dimen name="height_changepwd_Value">39dp</dimen>
+    <dimen name="height_changepwd_hint">21dp</dimen>
+    <dimen name="padRight_changepwd_hint">11dp</dimen>
+    <dimen name="fontSize_changePwd_Label">12sp</dimen>
+    <dimen name="fontSize_changePwd_hint">10sp</dimen>
+    <dimen name="fontSize_changePwd_SaveBtn">16sp</dimen>
+    <dimen name="PadLeft_changepwd">16dp</dimen>
+    <dimen name="PadTop_changePwd_saveBtn">37dp</dimen>
+
+    <!--fragment_device-->
+    <dimen name="fontSize_deviceConnState">14sp</dimen>
+    <dimen name="fontSize_deviceBegin">14.5sp</dimen>
+    <dimen name="height_device_name">20dp</dimen>
+    <dimen name="fontSize_device_name">12sp</dimen>
+    <dimen name="marginTop_device_name">28dp</dimen>
+    <dimen name="padLeft_device_device_item_img">14dp</dimen>
+
+    <!--ZorrorealControlActivity-->
+    <dimen name="zorro_padding1">9dp</dimen>
+    <dimen name="zorro_padding2">10dp</dimen>
+    <dimen name="zorro_padding5">-4dp</dimen>
+    <dimen name="zorro_padding8">7dp</dimen>
+    <dimen name="zorro_padding9">95dp</dimen>
+    <dimen name="zorro_padding10">63dp</dimen>
+    <dimen name="zorro_padding11">62dp</dimen>
+    <dimen name="zorro_padding12">94dp</dimen>
+    <dimen name="PadTop_zorro_title">2dp</dimen>
+    <dimen name="fontSize_zorro_title">12sp</dimen>
+    <dimen name="fontSize_zorro_satellite">10sp</dimen>
+
+    <!--RealControlActivity-->
+    <dimen name="PadTop_realcontrol_head">12dp</dimen>
+    <dimen name="space_realcontrol">20dp</dimen>
+    <dimen name="height_realcontrol_line">16dp</dimen>
+    <dimen name="PadLeft_realcontrol_nav">16dp</dimen>
+    <dimen name="fontSize_realcontrol_title">16sp</dimen>
+    <dimen name="shade_realControl_orention_bg">5dp</dimen>
+    <dimen name="padLeft_realcontrol_CameraControl">15dp</dimen>
+    <dimen name="padTop_realcontrol_CameraControl">23dp</dimen>
+    <dimen name="fontSize_unlock_txt">16sp</dimen>
+
+
+    <dimen name="sapce_realcontrol_unLock_arraw2Txt">13dp</dimen>
+    <dimen name="fontSize_selectConnType">14sp</dimen>
+    <dimen name="height_selectConnTypeBtn">25dp</dimen>
+    <dimen name="width_selectConnTypeBtn">156dp</dimen>
+
+    <dimen name="fontSize_popWin_camera">12sp</dimen>
+    <dimen name="width_popWin_item">54dp</dimen>
+    <dimen name="height_popWin_item">30dp</dimen>
+
+    <!--UploadAndSharedActivity-->
+    <dimen name="height_UploadProgress">49dp</dimen>
+    <dimen name="pad_itemTopic_cb">6dp</dimen>
+
+    <dimen name="pad_SharedDialog_Icon">14dp</dimen>
+
+    <!--DroneSetActivty-->
+    <dimen name="height_item_drone_dialog_set">41dp</dimen>
+    <dimen name="pad_drone_dialog_set">5dp</dimen>
+    <dimen name="pad_drone_dialog_set_2">3dp</dimen>
+
+    <!--LoginActivity-->
+    <dimen name="width_login_email">274dp</dimen>
+
+    <!--gail add begin -->
+    <!--Picture process-->
+    <dimen name="common_title_ui_size_100">60dp</dimen>
+    <!--PicturesProessActivyty，PicturesBeautifyActivyty，GalleryAnimationView界面都用的这个-->
+    <dimen name="pp_image_margin_top">94dp</dimen>
+    <dimen name="pp_image_margin_left_right">5dp</dimen>
+    <dimen name="pp_image_margin_bottom">20dp</dimen>
+    <dimen name="pp_process_iv">6dp</dimen>
+    <dimen name="pp_process_iv1">8dp</dimen>
+    <!--PicturesBeautify-->
+    <dimen name="pp_beautify_margin_top">20dp</dimen>
+
+    <dimen name="pp_clip_thum_width">41dp</dimen>
+    <dimen name="pp_clip_thum_height">45dp</dimen>
+    <dimen name="pp_clip_list_height">90dp</dimen>
+
+    <dimen name="pp_clip_item_margin_right">18dp</dimen>
+    <dimen name="pp_clip_item_margin_left">18dp</dimen>
+
+    <dimen name="pp_clip_text_picture_margin">9dp</dimen>
+    <dimen name="pp_filter_padding">2dp</dimen>
+    <dimen name="pp_clip_img_margin_top_50">25dp</dimen>
+
+    <dimen name="pp_filter_item_width">48dp</dimen>
+    <dimen name="pp_filter_item_height">52dp</dimen>
+
+    <dimen name="seekbar_thum_offset">2dp</dimen>
+    <dimen name="seekbar_thum_big_offset">4dp</dimen>
+
+    <dimen name="pp_filter_bottom_margin_34">17dp</dimen>
+
+    <dimen name="pp_watermark_logo_w">86dp</dimen>
+    <dimen name="pp_watermark_logo_h">20.5dp</dimen>
+    <dimen name="pp_watermark_logo_margin_left">19dp</dimen>
+    <dimen name="pp_watermark_logo_margin_top">21dp</dimen>
+    <dimen name="pp_watermark_date_margin_right">14dp</dimen>
+    <dimen name="pp_watermark_date_margin_bottom">12dp</dimen>
+    <dimen name="pp_watermark_location_icon_wh">18dp</dimen>
+    <dimen name="pp_watermark_date_w">50dp</dimen>
+    <dimen name="pp_watermark_date_h">10dp</dimen><!--PictureBorderActivity用了此dp-->
+
+    <dimen name="pp_compare_h">24dp</dimen>
+
+
+    <dimen name="vc_video_height_700">355dp</dimen>
+    <dimen name="vc_video_cut_thumbnail_height_80">40dp</dimen>
+    <dimen name="vc_video_cut_margin_left_right">15dp</dimen>
+    <dimen name="vc_video_confirm_600">300dp</dimen>
+    <dimen name="vc_video_confirm_height">45dp</dimen>
+    <dimen name="vc_confirm_margin_bottom_60">15dp</dimen>
+    <dimen name="vc_video_play_icon">52dp</dimen>
+    <dimen name="vc_cutter_height">67dp</dimen>
+    <dimen name="vc_cutter_width">15dp</dimen>
+    <dimen name="vc_video_cut_height_238">119dp</dimen>
+
+    <dimen name="vc_cutter_margin_left_right">10dp</dimen>
+    <dimen name="vc_progress_bar_width">4.5dp</dimen>
+    <dimen name="vc_float_margin">8.5dp</dimen>
+    <dimen name="vc_time_margin_right">5dp</dimen>
+    <dimen name="vc_time_margin_top">20dp</dimen>
+    <dimen name="vj_video_thumbnail_height">35dp</dimen>
+    <dimen name="vj_video_thumb_margin">10dp</dimen>
+    <dimen name="vj_video_progress_bar_h">61dp</dimen>
+    <dimen name="vj_video_thum_h">65dp</dimen>
+    <dimen name="vj_video_thum_wh">50dp</dimen>
+    <dimen name="vj_separate_h">17dp</dimen>
+    <dimen name="vj_separate_margin">11dp</dimen>
+    <dimen name="vj_delete_icon_wh">76dp</dimen>
+    <dimen name="vj_margin_bottom">54dp</dimen>
+
+    <dimen name="vf_theme_h">33dp</dimen>
+
+
+    <!--text size -->
+    <dimen name="text_list_item_normal">10sp</dimen>
+    <dimen name="text_size_xs">10sp</dimen>
+    <dimen name="text_size_s">12sp</dimen>
+    <dimen name="text_size_m">15sp</dimen>
+    <dimen name="areement_title_size">18sp</dimen>
+    <dimen name="text_size_20">10sp</dimen>
+
+    <!--common size -->
+    <dimen name="common_ui_size_2">1dp</dimen>
+    <dimen name="common_ui_size_5">2.5dp</dimen>
+    <dimen name="common_ui_size_6">3dp</dimen>
+    <dimen name="common_ui_size_8">4dp</dimen>
+    <dimen name="common_ui_size_10">5dp</dimen>
+    <dimen name="common_ui_size_15">7.5dp</dimen>
+    <dimen name="common_ui_size_16">8dp</dimen>
+    <dimen name="common_ui_size_18">9dp</dimen>
+    <dimen name="common_ui_size_20">10dp</dimen>
+    <dimen name="common_ui_size_22">11dp</dimen>
+    <dimen name="common_ui_size_26">13dp</dimen>
+    <dimen name="common_ui_size_30">15dp</dimen>
+    <dimen name="common_ui_size_32">16dp</dimen>
+    <dimen name="common_ui_size_34">17dp</dimen>
+    <dimen name="common_ui_size_36">18dp</dimen>
+    <dimen name="common_ui_size_40">20dp</dimen>
+    <dimen name="common_ui_size_46">23dp</dimen>
+    <dimen name="common_ui_size_50">25dp</dimen>
+    <dimen name="common_ui_size_60">30dp</dimen>
+    <dimen name="common_ui_size_80">40dp</dimen>
+    <dimen name="common_ui_size_126">63dp</dimen>
+    <dimen name="common_ui_size_146">73dp</dimen>
+    <dimen name="common_ui_size_168">84dp</dimen>
+
+    <dimen name="common_ui_size_283">141.5dp</dimen>
+
+
+    <!--gail add end -->
+
+    <!--未    适   配-->
+    <!--ui zize-->
+
+    <dimen name="pf_ui_size_1000">500dp</dimen>
+    <dimen name="pf_ui_size_980">490dp</dimen>
+    <dimen name="pf_ui_size_850">425dp</dimen>
+    <dimen name="pf_ui_size_736">368dp</dimen>
+    <dimen name="pf_ui_size_730">365dp</dimen>
+    <dimen name="pf_ui_size_720">360dp</dimen>
+    <dimen name="pf_ui_size_710">355dp</dimen>
+    <dimen name="pf_ui_size_640">320dp</dimen>
+    <dimen name="pf_ui_size_600">300dp</dimen>
+    <dimen name="pf_ui_size_584">292dp</dimen>
+    <dimen name="pf_ui_size_567">283.5dp</dimen>
+    <dimen name="pf_ui_size_559">279.5dp</dimen>
+    <dimen name="pf_ui_size_550">275dp</dimen>
+    <dimen name="pf_ui_size_536">268dp</dimen>
+    <dimen name="pf_ui_size_535">267.5dp</dimen>
+    <dimen name="pf_ui_size_526">263dp</dimen>
+    <dimen name="pf_ui_size_520">260dp</dimen>
+    <dimen name="pf_ui_size_500">250dp</dimen>
+    <dimen name="pf_ui_size_490">245dp</dimen>
+    <dimen name="pf_ui_size_486">243dp</dimen>
+    <dimen name="pf_ui_size_478">239dp</dimen>
+    <dimen name="pf_ui_size_470">235dp</dimen>
+    <dimen name="pf_ui_size_450">225dp</dimen>
+    <dimen name="pf_ui_size_444">222dp</dimen>
+    <dimen name="pf_ui_size_440">220dp</dimen>
+    <dimen name="pf_ui_size_430">215dp</dimen>
+    <dimen name="pf_ui_size_413">206.5dp</dimen>
+    <dimen name="pf_ui_size_400">200dp</dimen>
+    <dimen name="pf_ui_size_395">197.5dp</dimen>
+    <dimen name="pf_ui_size_390">195dp</dimen>
+    <dimen name="pf_ui_size_380">190dp</dimen>
+    <dimen name="pf_ui_size_370">185dp</dimen>
+    <dimen name="pf_ui_size_365">182.5dp</dimen>
+    <dimen name="pf_ui_size_360">180dp</dimen>
+    <dimen name="pf_ui_size_340">170dp</dimen>
+    <dimen name="pf_ui_size_334">167dp</dimen>
+    <dimen name="pf_ui_size_330">165dp</dimen>
+    <dimen name="pf_ui_size_324">162dp</dimen>
+    <dimen name="pf_ui_size_322">161dp</dimen>
+    <dimen name="pf_ui_size_320">160dp</dimen>
+    <dimen name="pf_ui_size_310">155dp</dimen>
+    <dimen name="pf_ui_size_300">150dp</dimen>
+    <dimen name="pf_ui_size_290">145dp</dimen>
+    <dimen name="pf_ui_size_283">141.5dp</dimen>
+    <dimen name="pf_ui_size_278">139dp</dimen>
+    <dimen name="pf_ui_size_276">138dp</dimen>
+    <dimen name="pf_ui_size_270">135dp</dimen>
+    <dimen name="pf_ui_size_267">133.5dp</dimen>
+    <dimen name="pf_ui_size_264">132dp</dimen>
+    <dimen name="pf_ui_size_262">131dp</dimen>
+    <dimen name="pf_ui_size_260">130dp</dimen>
+    <dimen name="pf_ui_size_254">127dp</dimen>
+    <dimen name="pf_ui_size_244">122dp</dimen>
+    <dimen name="pf_ui_size_240">120dp</dimen>
+    <dimen name="pf_ui_size_235">117.5dp</dimen>
+    <dimen name="pf_ui_size_230">115dp</dimen>
+    <dimen name="pf_ui_size_226">113dp</dimen>
+    <dimen name="pf_ui_size_227">113.5dp</dimen>
+    <dimen name="pf_ui_size_224">112dp</dimen>
+    <dimen name="pf_ui_size_220">110dp</dimen>
+    <dimen name="pf_ui_size_212">106dp</dimen>
+    <dimen name="pf_ui_size_208">104dp</dimen>
+    <dimen name="pf_ui_size_205">102dp</dimen>
+    <dimen name="pf_ui_size_202">101dp</dimen>
+    <dimen name="pf_ui_size_200">100dp</dimen>
+    <dimen name="pf_ui_size_196">98dp</dimen>
+    <dimen name="pf_ui_size_194">97dp</dimen>
+    <dimen name="pf_ui_size_180">90dp</dimen>
+    <dimen name="pf_ui_size_188">94dp</dimen>
+    <dimen name="pf_ui_size_178">89dp</dimen>
+    <dimen name="pf_ui_size_172">86dp</dimen>
+    <dimen name="pf_ui_size_168">84dp</dimen>
+    <dimen name="pf_ui_size_164">82dp</dimen>
+    <dimen name="pf_ui_size_160">80dp</dimen>
+    <dimen name="pf_ui_size_154">77dp</dimen>
+    <dimen name="pf_ui_size_150">75dp</dimen>
+    <dimen name="pf_ui_size_146">73dp</dimen>
+    <dimen name="pf_ui_size_144">72dp</dimen>
+    <dimen name="pf_ui_size_140">70dp</dimen>
+    <dimen name="pf_ui_size_138">69dp</dimen>
+    <dimen name="pf_ui_size_131">65.5dp</dimen>
+    <dimen name="pf_ui_size_130">65dp</dimen>
+    <dimen name="pf_ui_size_128">64dp</dimen>
+    <dimen name="pf_ui_size_126">63dp</dimen>
+    <dimen name="pf_ui_size_124">62dp</dimen>
+    <dimen name="pf_ui_size_123">61.5dp</dimen>
+    <dimen name="pf_ui_size_120">60dp</dimen>
+    <dimen name="pf_ui_size_117">58.5dp</dimen>
+    <dimen name="pf_ui_size_116">58dp</dimen>
+    <dimen name="pf_ui_size_115">57.5dp</dimen>
+    <dimen name="pf_ui_size_112">56dp</dimen>
+    <dimen name="pf_ui_size_110">55dp</dimen>
+    <dimen name="pf_ui_size_106">53dp</dimen>
+    <dimen name="pf_ui_size_105">52.5dp</dimen>
+    <dimen name="pf_ui_size_102">51dp</dimen>
+    <dimen name="pf_ui_size_100">50dp</dimen>
+    <dimen name="pf_ui_size_98">49dp</dimen>
+    <dimen name="pf_ui_size_97">48.5dp</dimen>
+    <dimen name="pf_ui_size_96">48dp</dimen>
+    <dimen name="pf_ui_size_94">47dp</dimen>
+    <dimen name="pf_ui_size_93">46.5dp</dimen>
+    <dimen name="pf_ui_size_92">46dp</dimen>
+    <dimen name="pf_ui_size_90">45dp</dimen>
+    <dimen name="pf_ui_size_88">44dp</dimen>
+    <dimen name="pf_ui_size_86">43dp</dimen>
+    <dimen name="pf_ui_size_85">42.5dp</dimen>
+    <dimen name="pf_ui_size_82">41dp</dimen>
+    <dimen name="pf_ui_size_81">40.5dp</dimen>
+    <dimen name="pf_ui_size_80">40dp</dimen>
+    <dimen name="pf_ui_size_83">41.5dp</dimen>
+    <dimen name="pf_ui_size_78">39dp</dimen>
+    <dimen name="pf_ui_size_76">38dp</dimen>
+    <dimen name="pf_ui_size_74">37dp</dimen>
+    <dimen name="pf_ui_size_73">36.5dp</dimen>
+    <dimen name="pf_ui_size_72">36dp</dimen>
+    <dimen name="pf_ui_size_70">35dp</dimen>
+    <dimen name="pf_ui_size_68">34dp</dimen>
+    <dimen name="pf_ui_size_66">33dp</dimen>
+    <dimen name="pf_ui_size_64">32dp</dimen>
+    <dimen name="pf_ui_size_62">31dp</dimen>
+    <dimen name="pf_ui_size_60">30dp</dimen>
+    <dimen name="pf_ui_size_58">29dp</dimen>
+    <dimen name="pf_ui_size_56">28dp</dimen>
+    <dimen name="pf_ui_size_54">27dp</dimen>
+    <dimen name="pf_ui_size_53">26.5dp</dimen>
+    <dimen name="pf_ui_size_50">25dp</dimen>
+    <dimen name="pf_ui_size_48">24dp</dimen>
+    <dimen name="pf_ui_size_47">23.5dp</dimen>
+    <dimen name="pf_ui_size_46">23dp</dimen>
+    <dimen name="pf_ui_size_44">22dp</dimen>
+    <dimen name="pf_ui_size_43">21.5dp</dimen>
+    <dimen name="pf_ui_size_42">21dp</dimen>
+    <dimen name="pf_ui_size_41">20.5dp</dimen>
+    <dimen name="pf_ui_size_40">20dp</dimen>
+    <dimen name="pf_ui_size_39">19.5dp</dimen>
+    <dimen name="pf_ui_size_38">19dp</dimen>
+    <dimen name="pf_ui_size_36">18dp</dimen>
+    <dimen name="pf_ui_size_35">18.5dp</dimen>
+    <dimen name="pf_ui_size_34">17dp</dimen>
+    <dimen name="pf_ui_size_33">16.5dp</dimen>
+    <dimen name="pf_ui_size_32">16dp</dimen>
+    <dimen name="pf_ui_size_31">15.5dp</dimen>
+    <dimen name="pf_ui_size_30">15dp</dimen>
+    <dimen name="pf_ui_size_28">14dp</dimen>
+    <dimen name="pf_ui_size_27">13.5dp</dimen>
+    <dimen name="pf_ui_size_26">13dp</dimen>
+    <dimen name="pf_ui_size_25">12.5dp</dimen>
+    <dimen name="pf_ui_size_24">12dp</dimen>
+    <dimen name="pf_ui_size_22">11dp</dimen>
+    <dimen name="pf_ui_size_21">10.5dp</dimen>
+    <dimen name="pf_ui_size_20">10dp</dimen>
+    <dimen name="pf_ui_size_18">9dp</dimen>
+    <dimen name="pf_ui_size_17">8.5dp</dimen>
+    <dimen name="pf_ui_size_16">8dp</dimen>
+    <dimen name="pf_ui_size_15">7.5dp</dimen>
+    <dimen name="pf_ui_size_14">7dp</dimen>
+    <dimen name="pf_ui_size_13">6.5dp</dimen>
+    <dimen name="pf_ui_size_12">6dp</dimen>
+    <dimen name="pf_ui_size_10">5dp</dimen>
+    <dimen name="pf_ui_size_8">4dp</dimen>
+    <dimen name="pf_ui_size_9">4.5dp</dimen>
+    <dimen name="pf_ui_size_6">3dp</dimen>
+    <dimen name="pf_ui_size_5">2.5dp</dimen>
+    <dimen name="pf_ui_size_4">2dp</dimen>
+    <dimen name="pf_ui_size_3">1.5dp</dimen>
+    <dimen name="pf_ui_size_2">1dp</dimen>
+    <dimen name="pf_ui_size_1">0.5dp</dimen>
+    <dimen name="pf_ui_size_16_">-16dp</dimen>
+    <dimen name="pf_ui_size_7_">-7dp</dimen>
+    <dimen name="pf_ui_size_380_">190dp</dimen>
+
+
+    <!--text size-->
+    <dimen name="pf_text_size_145">72.5sp</dimen>
+    <dimen name="pf_text_size_96">48sp</dimen>
+    <dimen name="pf_text_size_68">34sp</dimen>
+    <dimen name="pf_text_size_80">40sp</dimen>
+    <dimen name="pf_text_size_60">30sp</dimen>
+    <dimen name="pf_text_size_52">26sp</dimen>
+    <dimen name="pf_text_size_40">20sp</dimen>
+    <dimen name="pf_text_size_42">21sp</dimen>
+    <dimen name="pf_text_size_44">22sp</dimen>
+    <dimen name="pf_text_size_38">19sp</dimen>
+    <dimen name="pf_text_size_36">18sp</dimen>
+    <dimen name="pf_text_size_34">17sp</dimen>
+    <dimen name="pf_text_size_32">16sp</dimen>
+    <dimen name="pf_text_size_30">15sp</dimen>
+    <dimen name="pf_text_size_29">14.5sp</dimen>
+    <dimen name="pf_text_size_28">14sp</dimen>
+    <dimen name="pf_text_size_26">13sp</dimen>
+    <dimen name="pf_text_size_24">12sp</dimen>
+    <dimen name="pf_text_size_22">11sp</dimen>
+    <dimen name="pf_text_size_20">10sp</dimen>
+    <dimen name="pf_text_size_18">9sp</dimen>
+    <dimen name="pf_text_size_16">8sp</dimen>
+    <dimen name="pf_text_size_12">6sp</dimen>
+    <dimen name="device_location">15sp</dimen>
+    <dimen name="device_can_fly">15sp</dimen>
+    <dimen name="device_location_weather">25sp</dimen>
+    <!--                      -->
+
+
+    <!--国家选择-->
+    <dimen name="sort_size">29dp</dimen>
+    <dimen name="location_size_1">13sp</dimen>
+    <dimen name="location_size_2">16dp</dimen>
+    <dimen name="location_size_3">39dp</dimen>
+    <dimen name="location_size_4">18dp</dimen>
+    <!--边框-->
+    <dimen name="item_right_size1">19dp</dimen>
+    <dimen name="item_left_size">7dp</dimen>
+    <!--图片编辑-->
+    <dimen name="process_size1">23dp</dimen>
+
+    <!--zorro相机设置-->
+    <dimen name="camera_setting_bg_width">248dp</dimen>
+    <dimen name="flight_route_set_width">290dp</dimen>
+    <dimen name="camera_setting_top_height">55dp</dimen>
+    <dimen name="camera_setting_line_height">1.5dp</dimen>
+    <dimen name="camera_setting_content_height">23dp</dimen>
+    <dimen name="camera_setting_content_left">15dp</dimen>
+    <dimen name="camera_setting_gallery_height">39dp</dimen>
+    <dimen name="camera_setting_reset_height">40dp</dimen>
+    <dimen name="camera_setting_total_height">62dp</dimen>
+    <dimen name="camera_setting_gallery">18dp</dimen>
+    <dimen name="camera_setting_content_text_size">12sp</dimen>
+
+
+    <dimen name="height_show_barrier">30dp</dimen>
+    <dimen name="margin_show_barrier">3dp</dimen>
+
+    <!--地图界面右侧按钮-->
+    <dimen name="map_right_icon_height">35dp</dimen>
+    <dimen name="map_right_icon_margin">20dp</dimen>
+    <dimen name="map_right_button_new_icon_margin">65dp</dimen>
+    <dimen name="map_right_button_icon_margin">80dp</dimen>
+    <!--地图图层弹出框高宽-->
+    <dimen name="map_type_pop_window_height">80dp</dimen>
+    <dimen name="map_type_pop_window_width">120dp</dimen>
+    <dimen name="map_type_pop_map_height">48dp</dimen>
+    <dimen name="map_type_pop_map_width">48dp</dimen>
+
+    <!--手势选择-->
+    <dimen name="padLeft_gesture_intro_dialog">10dp</dimen>
+
+
+    <!--版本检查更新 -->
+
+    <dimen name="HeadHeight_LandMedia">40dp</dimen>
+    <dimen name="fontColor_Head_LandMedia">18sp</dimen>
+    <dimen name="PadRight_Head_landMedia">21dp</dimen>
+    <dimen name="spaceHead_LandMedia">1px</dimen>.
+    <dimen name="fontColor_Bottom_LandMedia">12sp</dimen>
+
+    <dimen name="heightProgress_downMedia">3dp</dimen>
+    <dimen name="pad_selectControlModel">16dp</dimen>
+    <dimen name="padTop_showControlModel">34dp</dimen>
+    <dimen name="padleft_showControlModel">30dp</dimen>
+    <dimen name="padRight_showControlModel">5dp</dimen>
+    <dimen name="padTop_showControlModelTip">10dp</dimen>
+
+    <dimen name="padleft_btn_into">20dp</dimen>
+    <dimen name="height_btn_into">30dp</dimen>
+    <dimen name="Pad_25_Ron">25dp</dimen>
+    <dimen name="Pad_20_Ron">20dp</dimen>
+    <dimen name="Pad_10_Ron">10dp</dimen>
+    <dimen name="Pad_15_Ron">15dp</dimen>
+    <dimen name="Pad_17_Ron">17dp</dimen>
+    <dimen name="Pad_5_Ron">5dp</dimen>
+    <dimen name="Pad_8_Ron">8dp</dimen>
+    <dimen name="Pad_151_Ron">151dp</dimen>
+    <dimen name="Pad_35_Ron">35dp</dimen>
+    <dimen name="Pad_40_Ron">40dp</dimen>
+    <dimen name="Pad_43_Ron">43dp</dimen>
+    <dimen name="Pad_50_Ron">50dp</dimen>
+    <dimen name="Pad_30_Ron">30dp</dimen>
+    <dimen name="Pad_73_Ron">73dp</dimen>
+    <dimen name="Pad_80_Ron">80dp</dimen>
+    <dimen name="Pad_365_Ron">365dp</dimen>
+    <dimen name="Pad_265_Ron">265dp</dimen>
+    <dimen name="Pad_300_Ron">300dp</dimen>
+    <dimen name="Pad_245_Ron">245dp</dimen>
+    <dimen name="Pad_160_Ron">160dp</dimen>
+    <dimen name="Pad_127_Ron">127dp</dimen>
+
+
+    <dimen name="fontSize_16_Ron">16sp</dimen>
+    <dimen name="fontSize_18_Ron">18sp</dimen>
+    <dimen name="fontSize_20_Ron">20sp</dimen>
+    <dimen name="fontSize_15_Ron">15sp</dimen>
+    <dimen name="fontSize_14_Ron">14sp</dimen>
+    <dimen name="fontSize_13_Ron">13sp</dimen>
+
+
+    <dimen name="width_ArcMenuChild">50dp</dimen>
+
+
+    <dimen name="width_Panel">195dp</dimen>
+
+    <dimen name="Space_ControlTop">10dp</dimen>
+
+    <dimen name="width_test">80dp</dimen>
+
+    <!--黑色Dialog的内容-->
+    <dimen name="font_BlackDialog_ContentSize">14sp</dimen>
+    <dimen name="font_BlackDialog_Title">16sp</dimen>
+
+    <dimen name="fontSize_musicType">16sp</dimen>
+    <dimen name="padLeft_musicType">10dp</dimen>
+
+    <!--云台回中，垂直向下的字体大小-->
+    <dimen name="fontSize_CameraOperate">12sp</dimen>
+    <dimen name="pf_text_size_48">24sp</dimen>
+    <dimen name="C1C2_text_size">10sp</dimen>
+</resources>

@@ -1,0 +1,83 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+def rootProjectExt = rootProject.ext;
+def jar_artifactId = 'gduModel'
+def jar_groupId = rootProjectExt.jar.groupId
+def jar_version = rootProjectExt.jar.version
+def configs = rootProjectExt.configs;
+def userName = configs.userName
+def userPassword = configs.password
+
+def mavenUrl = jar_version.contains('-SNAPSHOT') ? rootProjectExt.nexusUrl.nexusUrlSnapshot : rootProjectExt.nexusUrl.nexusUrlRelease
+
+
+android {
+    compileSdkVersion rootProjectExt.android.compileSdkVersion
+    buildToolsVersion rootProjectExt.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion rootProjectExt.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+publishing {
+    publications {
+        gduModel(MavenPublication) {
+            groupId jar_groupId
+            artifactId jar_artifactId
+            version jar_version
+            artifact "build/intermediates/bundles/release/classes.jar"
+
+            //generate pom nodes for dependencies
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.compile.allDependencies.each { dependency ->
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', dependency.group)
+                    dependencyNode.appendNode('artifactId', dependency.name)
+                    dependencyNode.appendNode('version', dependency.version)
+
+                }
+            }
+        }
+    }
+
+    //publish to filesystem repo
+    repositories {
+        maven {
+            credentials {
+                username userName
+                password userPassword
+            }
+//            url "http://172.16.63.190:8081/repository/Snapshots/"
+            url mavenUrl
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+dependencies {
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

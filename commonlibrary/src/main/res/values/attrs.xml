@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <declare-styleable name="CircleViewAttrs">
+        <attr name="outter_ring_bg" format="reference" />
+        <attr name="outter_sweep_data" format="integer" />
+        <attr name="panStyle" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="SetCircleViewAttrs">
+        <attr name="set_variable_type" format="string" />
+        <attr name="min_value" format="integer" />
+        <attr name="max_value" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberPickerPreference">
+        <attr name="minValue" format="integer" />
+        <attr name="maxValue" format="integer" />
+        <attr name="setWrapSelectorWheel" format="boolean" />
+
+    </declare-styleable>
+
+    <attr name="circlecolor" format="color"></attr>
+    <attr name="half" format="dimension"></attr>
+    <attr name="radius" format="dimension" />
+    <attr name="textColor" format="color" />
+
+    <declare-styleable name="myCircleImage">
+        <attr name="circlecolor"></attr>
+        <attr name="half"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="CropImageView">
+        <attr name="guidelines">
+            <enum name="on" value="2" />
+            <enum name="onTouch" value="1" />
+            <enum name="off" value="0" />
+        </attr>
+        <attr name="fixAspectRatio" format="boolean" />
+        <attr name="aspectRatioX" format="integer" />
+        <attr name="aspectRatioY" format="integer" />
+        <attr name="imageResource" format="reference" />
+    </declare-styleable>
+
+    <style name="myDialog" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <!--shang 禁用点击空白处自动关闭-->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+
+    </style>
+
+
+    <declare-styleable name="CircleFlowIndicator">
+        <attr name="activeColor" format="color" />
+        <attr name="inactiveColor" format="color" />
+        <attr name="radius" />
+        <attr name="centered" format="boolean" />
+        <attr name="fadeOut" format="integer" />
+        <attr name="inactiveType">
+            <flag name="stroke" value="0" />
+            <flag name="fill" value="1" />
+        </attr>
+        <attr name="activeType">
+            <flag name="stroke" value="0" />
+            <flag name="fill" value="1" />
+        </attr>
+        <attr name="circleSeparation" format="dimension" />
+        <attr name="activeRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ViewFlow">
+        <attr name="sidebuffer" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+
+    <!-- 个人中心的下拉pull-->
+    <declare-styleable name="PullToZoomView">
+        <attr name="headerView" format="reference" />
+        <attr name="contentView" format="reference" />
+        <attr name="zoomView" format="reference" />
+        <attr name="isHeaderParallax" format="boolean" />
+    </declare-styleable>
+
+    <!--操纵杆自定义属性-->
+    <declare-styleable name="rockerView">
+        <attr name="leftPanel" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressbar">
+        <attr name="radius" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="ringColor" format="color" />
+        <attr name="textColor" />
+    </declare-styleable>
+    <!--Wheelview 使用-->
+    <declare-styleable name="pickerview">
+        <attr name="pickerview_gravity">
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+        </attr>
+        <attr name="pickerview_textSize" format="dimension" />
+        <attr name="pickerview_textColorOut" format="color" />
+        <attr name="pickerview_textColorCenter" format="color" />
+        <attr name="pickerview_dividerColor" format="color" />
+        <attr name="pickerview_lineSpacingMultiplier" format="float" />
+    </declare-styleable>
+
+    <!--设置view自定义属性-->
+    <declare-styleable name="GduSettingOptionView">
+        <attr name="optionArray" format="reference" />
+        <attr name="viewHeight"  format="dimension"/>
+    </declare-styleable>
+</resources>

@@ -3,9 +3,9 @@ com/swi/baselibrary/BuildConfig.java
 com/swi/baselibrary/BaseActivity.java
  com.swi.baselibrary.BaseActivity
 com/swi/baselibrary/GlobalVariable.java
- com.swi.baselibrary.GlobalVariable
+ com.swi.commonlibrary.GlobalVariable
 com/swi/baselibrary/DisplayUtils.java
- com.swi.baselibrary.DisplayUtils
+ com.swi.commonlibrary.utils.DisplayUtils
 com/swi/baselibrary/SwitchMapAndSurface.java
  com.swi.baselibrary.SwitchMapAndSurface
  com.swi.baselibrary.SwitchMapAndSurface$1

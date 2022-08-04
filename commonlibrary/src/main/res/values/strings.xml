@@ -1,0 +1,21 @@
+<resources>
+    <string name="permission_cancel">取消</string>
+    <string name="permission_setting">去设置</string>
+    <string name="permission_title_permission_failed">权限申请失败</string>
+    <string name="permission_message_permission_failed">我们需要的一些权限被您拒绝或者系统发生错误申请失败，请您到设置页面手动授权，否则功能无法正常使用！</string>
+
+    <string name="permission_resume">继续</string>
+    <string name="permission_title_permission_rationale">权限已被拒绝</string>
+    <string name="permission_message_permission_rationale">您已经拒绝过我们申请授权，请您同意授权，否则功能无法正常使用！</string>
+
+    <string name="Install_authorization">去授权</string>
+    <string name="Install_Prompt">提示</string>
+
+    <string name="Label_Android_GetDevice_permission">由于获取不了设备信息权限，无法正常使用GDU Flight.</string>
+    <string name="Label_Android_GetLoction_permission">由于获取不了位置信息权限，无法正常使用GDU Flight.</string>
+    <string name="Label_Android_GetSD_permission">由于获取不了访问SD卡权限，无法正常使用GDU Flight.</string>
+    <string name="Label_Android_Need_permission">为了保证你能正常使用GDU Flight, 请点击 \"设置\"-\"权限\" 打开所需权限</string>
+
+    <string name="Label_Sure">确定</string>
+    <string name="Label_cancel">取消</string>
+</resources>

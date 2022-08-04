@@ -7,6 +7,8 @@ import android.view.View;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.swi.commonlibrary.GlobalVariable;
+
 import static com.swi.baselibrary.R.*;
 
 /**
