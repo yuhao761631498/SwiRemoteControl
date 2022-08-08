@@ -1,8 +1,10 @@
 package com.swi.datalinklibrary.aoa;
 
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.hardware.usb.UsbAccessory;
 import android.hardware.usb.UsbManager;
 import android.os.ParcelFileDescriptor;
@@ -31,7 +33,7 @@ import static com.swi.commonlibrary.GlobalVariable.ACCESSORY_MODE2;
  */
 public abstract class AoaDataLink {
 
-    private final String ACTION_USB_PERMISSION = "com.android.gdu.saga.USB_PERMISSION";
+    public final String ACTION_USB_PERMISSION = "com.android.gdu.saga.USB_PERMISSION";
 
     private final Context mContext;
 
@@ -66,7 +68,7 @@ public abstract class AoaDataLink {
     /**
      * 每次从usb读数据的缓存
      */
-    private byte[] readCacheBuffer;
+    private final byte[] readCacheBuffer;
 
     private Thread readThread;
 
@@ -74,6 +76,10 @@ public abstract class AoaDataLink {
         this.mContext = context;
         mUsbManager = (UsbManager) context.getSystemService(Context.USB_SERVICE);
         sendQueue = new LinkedBlockingQueue<>(128);
+        readCacheBuffer = new byte[1024 * 4];
+
+        IntentFilter intentFilter = new IntentFilter(ACTION_USB_PERMISSION);
+        context.registerReceiver(permissionReceiver, intentFilter);
     }
 
     public void isChargeByUsb(boolean isCharge) {
@@ -207,7 +213,6 @@ public abstract class AoaDataLink {
                             Thread.sleep(100);
                         }
                     }
-
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                     YhLog2File.getSingle().saveData("write thread 被打断");
@@ -264,10 +269,11 @@ public abstract class AoaDataLink {
      * 把数据存放到发送的队列中，等待发送
      * @param data 待发送的数据
      */
-    public void sendData2Usb(byte[] data) {
+    public boolean sendDataLinkData(byte[] data) {
         if (connAble && sendQueue != null) {
-            sendQueue.offer(data);
+            return sendQueue.offer(data);
         }
+        return false;
     }
 
     private void writeLog(byte[] data) {
@@ -279,7 +285,6 @@ public abstract class AoaDataLink {
             System.out.println("test readLength writeLog " + sb.toString());
         }
     }
-
 
     public void onAoaDestroy() {
         mFileInputStream = null;
@@ -330,6 +335,20 @@ public abstract class AoaDataLink {
     }
 
 
+    private final BroadcastReceiver permissionReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals(ACTION_USB_PERMISSION)) {
+                boolean granted = intent.getBooleanExtra(UsbManager.EXTRA_PERMISSION_GRANTED, false);
+                if (granted) {
+                    requestPermissionIng = false;
+                }
+            }
+        }
+    };
+
+
     /**
      * 回收资源,是界面倍回收的时候调用
      */
@@ -338,5 +357,7 @@ public abstract class AoaDataLink {
             writeThread.interrupt();
             writeThread = null;
         }
+
+        mContext.unregisterReceiver(permissionReceiver);
     }
 }

@@ -1,7 +1,7 @@
 package com.swi.datalinklibrary.serialport;
 
 /**
- * Copyright (C), 2020-2030, 武汉中旗生物医疗电子有限公司
+ * Copyright (C), 2020-2030
  * <p>
  * 功能描述:
  * <p>

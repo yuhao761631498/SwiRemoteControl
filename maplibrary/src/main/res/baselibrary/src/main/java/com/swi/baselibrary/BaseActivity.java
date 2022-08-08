@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
- * Copyright (C), 2020-2030, 武汉中旗生物医疗电子有限公司
+ * Copyright (C), 2020-2030
  * <p>
  * 功能描述: Activity的基类
  * <p>

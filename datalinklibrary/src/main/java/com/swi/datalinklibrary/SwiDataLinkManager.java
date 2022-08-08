@@ -9,7 +9,7 @@ import com.swi.datalinklibrary.aoa.UsbReceiver;
 import com.swi.datalinklibrary.serialport.SwiSerialPort;
 
 /**
- * Copyright (C), 2020-2030, 武汉中旗生物医疗电子有限公司
+ * Copyright (C), 2020-2030
  * <p>
  * 功能描述:
  * <p>
@@ -46,6 +46,21 @@ public class SwiDataLinkManager {
             swiAccessory = new SwiAccessory(context);
         }
         swiAccessory.isChargeByUsb(isCharge);
+    }
+
+
+    /**
+     * 通过数据链发送数据
+     *
+     * @param data 需要发送的数据
+     */
+    public boolean sendDataByDataLink(byte[] data) {
+        if (swiAccessory != null) {
+            return swiAccessory.sendDataLinkData(data);
+        } else if (swiSerialPort != null) {
+            //TODO
+        }
+        return false;
     }
 
     public void SwitchSerialPortMode(boolean isConnect) {

@@ -15,9 +15,9 @@ import androidx.annotation.NonNull;
 import com.swi.commonlibrary.GlobalVariable;
 import com.swi.commonlibrary.R;
 import com.swi.commonlibrary.dialog.GeneralDialog;
-import com.swzn.permission.AndPermission;
-import com.swzn.permission.PermissionListener;
-import com.swzn.permission.SettingService;
+import com.swi.permission.AndPermission;
+import com.swi.permission.PermissionListener;
+import com.swi.permission.SettingService;
 
 
 import java.util.ArrayList;
