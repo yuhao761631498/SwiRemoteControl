@@ -1,9 +1,8 @@
-package com.swi.remotecontrol.application;
+package com.swi.commonlibrary.application;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
-
 import com.swi.commonlibrary.utils.SwiToast;
 
 /**
@@ -17,7 +16,7 @@ public class SwiApplication extends Application {
     @SuppressLint("StaticFieldLeak")
     public static Context context;
 
-    public Context getGDUContext() {
+    public Context getContext() {
         return getApplicationContext();
     }
 

@@ -1,4 +1,5 @@
 package com.swi.datalinklibrary.serialport;
+import com.swi.datalinklibrary.DataPackageCallback;
 
 /**
  * Copyright (C), 2020-2030
@@ -9,6 +10,11 @@ package com.swi.datalinklibrary.serialport;
  *
  * @author yuhao
  */
-public abstract class SerialPortDataLink {
+public class SerialPortDataLink {
 
+    private DataPackageCallback dataPackageCallback;
+
+    public void setDataPackageCallback(DataPackageCallback dataPackageCallback) {
+        this.dataPackageCallback=dataPackageCallback;
+    }
 }

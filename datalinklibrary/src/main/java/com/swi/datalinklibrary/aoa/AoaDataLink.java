@@ -12,6 +12,7 @@ import android.util.Log;
 
 import com.swi.commonlibrary.YhLog2File;
 import com.swi.commonlibrary.utils.DataUtil;
+import com.swi.datalinklibrary.DataPackageCallback;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -31,7 +32,7 @@ import static com.swi.commonlibrary.GlobalVariable.ACCESSORY_MODE2;
  *
  * @author yuhao
  */
-public abstract class AoaDataLink {
+public class AoaDataLink {
 
     public final String ACTION_USB_PERMISSION = "com.android.gdu.saga.USB_PERMISSION";
 
@@ -71,6 +72,8 @@ public abstract class AoaDataLink {
     private final byte[] readCacheBuffer;
 
     private Thread readThread;
+
+    private DataPackageCallback dataPackageCallback;
 
     public AoaDataLink(Context context) {
         this.mContext = context;
@@ -251,7 +254,9 @@ public abstract class AoaDataLink {
                         Thread.sleep(100);
                         continue;
                     }
-                    parseDataLinkData(readCacheBuffer, readLength);
+                    if (dataPackageCallback != null) {
+                        dataPackageCallback.getByteArray(readCacheBuffer, readLength);
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                     YhLog2File.getSingle().saveData("接收数据异常————IOException:" + e.toString());
@@ -263,7 +268,9 @@ public abstract class AoaDataLink {
         }
     };
 
-    public abstract void parseDataLinkData(byte[] buffer, int length);
+    public void setDataPackageCallback(DataPackageCallback dataPackageCallback) {
+        this.dataPackageCallback = dataPackageCallback;
+    }
 
     /***
      * 把数据存放到发送的队列中，等待发送

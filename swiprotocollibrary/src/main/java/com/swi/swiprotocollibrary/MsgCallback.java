@@ -1,6 +1,6 @@
 package com.swi.swiprotocollibrary;
 
-import com.swi.swiprotocollibrary.baseprotocol.BaseSwiFrameBean;
+import com.swi.swiprotocollibrary.baseprotocol.BaseAck;
 
 /**
  * Copyright (C), 2020-2030
@@ -13,6 +13,6 @@ import com.swi.swiprotocollibrary.baseprotocol.BaseSwiFrameBean;
  */
 public interface MsgCallback {
 
-    void callback(short codeError, BaseSwiFrameBean baseSwiFrameBean);
+    void callback(short codeError, BaseAck baseAck);
 
 }

@@ -7,6 +7,7 @@ import androidx.annotation.RequiresApi;
 
 import com.swi.commonlibrary.config.CodeErrorConfig;
 import com.swi.datalinklibrary.SwiDataLinkManager;
+import com.swi.swiprotocollibrary.baseprotocol.ParseDataPackage;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -23,10 +24,14 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class CacheMsgTimeoutCheck extends Thread {
 
+    private ParseDataPackage parseDataPackage;
+
     private ConcurrentHashMap<Short, CacheBean> cacheHashMap;
 
     public CacheMsgTimeoutCheck() {
         cacheHashMap = new ConcurrentHashMap<>(256);
+
+        parseDataPackage = new ParseDataPackage(cacheHashMap);
     }
 
     public void putCacheMsg(short msgId, MsgCallback msgCallback, byte[] msg) {
@@ -55,7 +60,6 @@ public class CacheMsgTimeoutCheck extends Thread {
                 long currentTime = SystemClock.elapsedRealtime();
                 if (iterator.hasNext()) {
                     Map.Entry<Short, CacheBean> next = iterator.next();
-//                Short key = next.getKey();
                     CacheBean value = next.getValue();
                     MsgCallback msgCallback = value.msgCallback;
                     if (value != null && currentTime - value.sendTime > 3000) {
@@ -88,6 +92,11 @@ public class CacheMsgTimeoutCheck extends Thread {
             cacheHashMap.clear();
             cacheHashMap = null;
             interrupt();
+        }
+
+        if (parseDataPackage != null) {
+            parseDataPackage.destroyParseData();
+            parseDataPackage = null;
         }
     }
 }

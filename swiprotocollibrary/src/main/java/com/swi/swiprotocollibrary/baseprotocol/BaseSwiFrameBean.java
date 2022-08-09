@@ -14,6 +14,11 @@ import com.swi.commonlibrary.utils.CRC16M;
  */
 public abstract class BaseSwiFrameBean {
 
+
+    public BaseSwiFrameBean(short frameMsgID) {
+        this.frameMsgID = frameMsgID;
+    }
+
     public BaseSwiFrameBean(byte frameCmdType, byte frameMsgType, short frameMsgID, byte frameDesSysID,
                             byte frameDesComID) {
         this.frameCmdType = frameCmdType;
@@ -145,7 +150,7 @@ public abstract class BaseSwiFrameBean {
         index++;
         msg[index] = frameHeader2;
         index++;
-        msg[index] = getMsgType(frameCmdType, frameMsgType);
+        msg[index] = encodeMsgType(frameCmdType, frameMsgType);
         index++;
         msg[index] = frameSrcSysID;
         index++;
@@ -172,12 +177,17 @@ public abstract class BaseSwiFrameBean {
         return msg;
     }
 
-    private byte getMsgType(byte frameCmdType, byte frameMsgType) {
-        return (byte) (frameOptional & 0x80 | frameCmdType & 0x07 | frameMsgType & 0x78);
+    public byte encodeMsgType(byte frameCmdType, byte frameMsgType) {
+        return (byte) (frameOptional & 0x80 | frameMsgType & 0x78 | frameCmdType & 0x07);
+    }
+
+    public void decodeMsgType(byte value) {
+        frameCmdType = (byte) (value & 0x07);
+        frameMsgType = (byte) (value & 0x78 >> 3);
+        frameOptional = (byte) (value & 0x80 >> 7);
     }
 
     public abstract byte[] encode();
 
-    public abstract void decode(byte[] data);
 
 }

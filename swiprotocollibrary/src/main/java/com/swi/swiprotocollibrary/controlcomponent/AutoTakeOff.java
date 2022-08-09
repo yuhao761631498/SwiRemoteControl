@@ -15,8 +15,9 @@ import com.swi.swiprotocollibrary.baseprotocol.BaseSwiFrameBean;
 public class AutoTakeOff extends BaseSwiFrameBean {
 
     public AutoTakeOff() {
-        super((byte)0, (byte)0, (short) 0x0040, (byte) 1, (byte) 1);
+        super((byte) 0, (byte) 0, (short) 0x0040, (byte) 1, (byte) 1);
     }
+
 
     /**
      * 启航高度 （起航高度值 100-5000cm
@@ -39,11 +40,4 @@ public class AutoTakeOff extends BaseSwiFrameBean {
         return bytes;
     }
 
-    @Override
-    public void decode(byte[] data) {
-        int index = 0;
-        autoTakeOff_height = ByteUtils.byte2short(data, index);
-        index += 2;
-        autoTakeOff_speed = ByteUtils.byte2short(data, index);
-    }
 }
