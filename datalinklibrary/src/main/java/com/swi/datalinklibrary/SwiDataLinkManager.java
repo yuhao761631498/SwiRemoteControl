@@ -7,6 +7,7 @@ import android.content.IntentFilter;
 import com.swi.datalinklibrary.aoa.AoaDataLink;
 import com.swi.datalinklibrary.aoa.UsbReceiver;
 import com.swi.datalinklibrary.serialport.SerialPortDataLink;
+import com.swi.datalinklibrary.socket.SocketDataLink;
 
 /**
  * Copyright (C), 2020-2030
@@ -17,7 +18,7 @@ import com.swi.datalinklibrary.serialport.SerialPortDataLink;
  *
  * @author yuhao
  */
-public class SwiDataLinkManager implements DataPackageCallback {
+public class SwiDataLinkManager implements CombinePackageCallback {
 
     private static SwiDataLinkManager swiDataLinkManager;
 
@@ -26,6 +27,8 @@ public class SwiDataLinkManager implements DataPackageCallback {
     private AoaDataLink aoaDataLink;
     private SerialPortDataLink serialPortDataLink;
     private ParsePackageCallback parsePackageCallback;
+    private SocketDataLink socketDataLink;
+    private CombinePackage combinePackage;
 
     public static SwiDataLinkManager getInstance() {
         if (swiDataLinkManager == null) {
@@ -40,6 +43,12 @@ public class SwiDataLinkManager implements DataPackageCallback {
         IntentFilter batteryFilter = new IntentFilter();
         batteryFilter.addAction(Intent.ACTION_BATTERY_CHANGED);
         context.registerReceiver(usbReceiver, batteryFilter);
+
+        aoaDataLink = new AoaDataLink(context);
+        serialPortDataLink = new SerialPortDataLink();
+        socketDataLink = new SocketDataLink();
+
+        combinePackage = new CombinePackage(this, aoaDataLink, serialPortDataLink, socketDataLink);
     }
 
     /**
@@ -48,13 +57,10 @@ public class SwiDataLinkManager implements DataPackageCallback {
      * @param isCharge 是否正在充电
      */
     public void switchUsbMode(boolean isCharge) {
-        if (aoaDataLink == null) {
-            aoaDataLink = new AoaDataLink(context);
-            aoaDataLink.setDataPackageCallback(this);
+        if (aoaDataLink != null) {
+            aoaDataLink.isChargeByUsb(isCharge);
         }
-        aoaDataLink.isChargeByUsb(isCharge);
     }
-
 
     /**
      * 通过数据链发送数据
@@ -70,35 +76,37 @@ public class SwiDataLinkManager implements DataPackageCallback {
         return false;
     }
 
-
-    public void switchSerialPortMode() {
-        if (serialPortDataLink != null) {
-            serialPortDataLink = new SerialPortDataLink();
-            serialPortDataLink.setDataPackageCallback(this);
-        }
-    }
-
     @Override
-    public void getByteArray(byte[] buffer, int length) {
-        if (parsePackageCallback != null) {
-            parsePackageCallback.parseData(buffer, length);
+    public void combinePackage(byte[] packageByte) {
+        if (parsePackageCallback != null && packageByte != null) {
+            parsePackageCallback.parseData(packageByte, packageByte.length);
         }
     }
-
 
     public void setParsePackageCallback(ParsePackageCallback parsePackageCallback) {
         this.parsePackageCallback = parsePackageCallback;
     }
 
-
     public void onDestroy() {
         context.unregisterReceiver(usbReceiver);
         if (aoaDataLink != null) {
             aoaDataLink.onDestroy();
+            aoaDataLink = null;
         }
+
         if (usbReceiver != null) {
             usbReceiver.onDestroy();
             usbReceiver = null;
+        }
+
+        if (socketDataLink != null) {
+            socketDataLink.destroySocket();
+            socketDataLink = null;
+        }
+
+        if (combinePackage != null) {
+            combinePackage.destroyCombine();
+            combinePackage = null;
         }
     }
 

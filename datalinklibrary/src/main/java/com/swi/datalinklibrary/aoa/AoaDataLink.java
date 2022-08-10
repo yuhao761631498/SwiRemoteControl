@@ -255,7 +255,9 @@ public class AoaDataLink {
                         continue;
                     }
                     if (dataPackageCallback != null) {
-                        dataPackageCallback.getByteArray(readCacheBuffer, readLength);
+                        byte[] message = new byte[readLength];
+                        System.arraycopy(readCacheBuffer, 0, message, 0, readLength);
+                        dataPackageCallback.getByteArray(message, readLength);
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
