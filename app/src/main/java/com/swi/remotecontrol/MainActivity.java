@@ -1,6 +1,7 @@
 package com.swi.remotecontrol;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.TextureView;
 import android.view.View;
@@ -20,6 +21,8 @@ import com.swi.commonlibrary.utils.DisplayUtils;
 import com.swi.datalinklibrary.SwiDataLinkManager;
 import com.swi.maplibrary.callback.MapWindowClickCallback;
 import com.swi.maplibrary.mapview.GuideMapFragment;
+import com.swi.remotecontrol.activity.TestActivity;
+import com.swi.swiprotocollibrary.ComponentManager;
 
 public class MainActivity extends BaseActivity implements MapWindowClickCallback, View.OnClickListener {
 
@@ -32,7 +35,6 @@ public class MainActivity extends BaseActivity implements MapWindowClickCallback
     private FrameLayout fr_map_content;
     private TextureView texture_View;
     private ConstraintLayout cs_video_content;
-
 
     @Override
     public int getLayoutId() {
@@ -94,6 +96,7 @@ public class MainActivity extends BaseActivity implements MapWindowClickCallback
             SwitchMapAndSurface.switchWindow(MainActivity.this, fr_map_content, cs_video_content,
                     () -> guideMapFragment.removeTouchListener());
         }
+        startActivity(new Intent(MainActivity.this, TestActivity.class));
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -116,6 +119,7 @@ public class MainActivity extends BaseActivity implements MapWindowClickCallback
     protected void onDestroy() {
         super.onDestroy();
         SwiDataLinkManager.getInstance().onDestroy();
+        ComponentManager.getInstance().destroyComponentManager();
         YhLog2File.getSingle().stopSave();
         guideMapFragment = null;
     }

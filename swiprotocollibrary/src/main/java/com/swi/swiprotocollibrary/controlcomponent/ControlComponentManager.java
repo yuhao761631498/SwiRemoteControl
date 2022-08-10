@@ -1,6 +1,5 @@
 package com.swi.swiprotocollibrary.controlcomponent;
 
-import com.swi.datalinklibrary.SwiDataLinkManager;
 import com.swi.swiprotocollibrary.CacheMsgTimeoutCheck;
 import com.swi.swiprotocollibrary.MsgCallback;
 import com.swi.swiprotocollibrary.baseprotocol.SendMsgArrayData;
@@ -29,5 +28,21 @@ public class ControlComponentManager extends SendMsgArrayData {
         autoTakeOff.autoTakeOff_speed = 50;
         byte[] encode = autoTakeOff.encodeMsg();
         sendCmd(autoTakeOff.frameMsgID, encode, msgCallback);
+    }
+
+    /**
+     * 添加控制组件的周期回调
+     */
+    public void setControlCycleCallback(short msgId, MsgCallback msgCallback) {
+        addCycleCallback(msgId, msgCallback);
+    }
+
+    /**
+     * 移除控制组件的周期回调
+     *
+     * @param msgId  消息id
+     */
+    public void removeControlCycleCallback(short msgId) {
+        removeCycleCallback(msgId);
     }
 }

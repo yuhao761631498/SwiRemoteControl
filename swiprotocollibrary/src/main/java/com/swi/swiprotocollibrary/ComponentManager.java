@@ -13,21 +13,13 @@ import com.swi.swiprotocollibrary.controlcomponent.ControlComponentManager;
  */
 public class ComponentManager extends ShowErrorCode {
 
-    private static ComponentManager componentManager;
+    private static final ComponentManager componentManager = new ComponentManager();
     private CacheMsgTimeoutCheck cacheMsgTimeoutCheck;
     private ControlComponentManager controlComponentManager;
 
     public static ComponentManager getInstance() {
-        if (componentManager == null) {
-            synchronized (ComponentManager.class) {
-                if (componentManager == null) {
-                    componentManager = new ComponentManager();
-                }
-            }
-        }
         return componentManager;
     }
-
 
     public ComponentManager() {
         cacheMsgTimeoutCheck = new CacheMsgTimeoutCheck();
@@ -46,9 +38,11 @@ public class ComponentManager extends ShowErrorCode {
     /**
      * 获取控制组件
      */
-    public void getControlComponent() {
-        controlComponentManager = new ControlComponentManager(cacheMsgTimeoutCheck);
+    public ControlComponentManager getControlComponent() {
+        if (controlComponentManager == null) {
+            controlComponentManager = new ControlComponentManager(cacheMsgTimeoutCheck);
+        }
+        return controlComponentManager;
     }
-
 
 }

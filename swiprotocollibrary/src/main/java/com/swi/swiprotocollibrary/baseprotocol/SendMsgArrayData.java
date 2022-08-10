@@ -29,4 +29,18 @@ public class SendMsgArrayData {
     }
 
 
+    public void addCycleCallback(short msgId, MsgCallback msgCallback) {
+        if (cacheMsgTimeoutCheck != null) {
+            cacheMsgTimeoutCheck.addCycleCache(msgId, msgCallback);
+        }
+    }
+
+
+    public void removeCycleCallback(short msgId) {
+        if (cacheMsgTimeoutCheck != null) {
+            cacheMsgTimeoutCheck.removeCycleCache(msgId);
+        }
+    }
+
+
 }

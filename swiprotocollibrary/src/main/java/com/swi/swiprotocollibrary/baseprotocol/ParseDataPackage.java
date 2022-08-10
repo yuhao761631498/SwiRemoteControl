@@ -59,6 +59,7 @@ public class ParseDataPackage implements ParsePackageCallback {
                                             public void run() {
                                                 AutoTakeOffAck autoTakeOffAck = new AutoTakeOffAck();
                                                 autoTakeOffAck.decodeMsg(buffer, length);
+                                                autoTakeOffAck.frameMsgID = MSG_ID_AUTO_TAKEOFF;
                                                 CacheBean cacheBean = cacheHashMap.get(autoTakeOffAck.frameMsgID);
                                                 if (cacheBean != null && cacheBean.msgCallback != null) {
                                                     cacheBean.msgCallback.callback(autoTakeOffAck.ack, autoTakeOffAck);

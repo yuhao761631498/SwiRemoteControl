@@ -30,7 +30,6 @@ public class CacheMsgTimeoutCheck extends Thread {
 
     public CacheMsgTimeoutCheck() {
         cacheHashMap = new ConcurrentHashMap<>(256);
-
         parseDataPackage = new ParseDataPackage(cacheHashMap);
     }
 
@@ -39,6 +38,28 @@ public class CacheMsgTimeoutCheck extends Thread {
             CacheBean cacheBean = new CacheBean(msgCallback, msg);
             cacheHashMap.put(msgId, cacheBean);
         }
+    }
+
+    /**
+     * 添加周期回调
+     *
+     * @param msgId       消息ID
+     * @param msgCallback 回调
+     */
+    public void addCycleCache(short msgId, MsgCallback msgCallback) {
+        if (msgCallback != null) {
+            CacheBean cacheBean = new CacheBean(msgCallback, true);
+            cacheHashMap.put(msgId, cacheBean);
+        }
+    }
+
+    /**
+     * 移除周期回调
+     *
+     * @param msgId 消息ID
+     */
+    public void removeCycleCache(short msgId) {
+        cacheHashMap.remove(msgId);
     }
 
     public CacheBean getCacheMsg(short msgId) {
@@ -62,18 +83,20 @@ public class CacheMsgTimeoutCheck extends Thread {
                     Map.Entry<Short, CacheBean> next = iterator.next();
                     CacheBean value = next.getValue();
                     MsgCallback msgCallback = value.msgCallback;
-                    if (value != null && currentTime - value.sendTime > 3000) {
-                        iterator.remove();
-                        if (msgCallback != null) {
-                            msgCallback.callback(CodeErrorConfig.CODE_TIMEOUT, null);
-                        }
-                    } else if (value != null && currentTime - value.sendTime > 1000) {
-                        value.sendTime = currentTime;
-                        boolean isSend = SwiDataLinkManager.getInstance().sendDataByDataLink(value.msgArray);
-                        if (!isSend) {
+                    if (!value.isCycle) {
+                        if (currentTime - value.sendTime > 3000) {
+                            iterator.remove();
                             if (msgCallback != null) {
-                                iterator.remove();
-                                msgCallback.callback(CodeErrorConfig.CODE_SEND_FAILED, null);
+                                msgCallback.callback(CodeErrorConfig.CODE_TIMEOUT, null);
+                            }
+                        } else if (currentTime - value.sendTime > 1000) {
+                            value.sendTime = currentTime;
+                            boolean isSend = SwiDataLinkManager.getInstance().sendDataByDataLink(value.msgArray);
+                            if (!isSend) {
+                                if (msgCallback != null) {
+                                    iterator.remove();
+                                    msgCallback.callback(CodeErrorConfig.CODE_SEND_FAILED, null);
+                                }
                             }
                         }
                     }

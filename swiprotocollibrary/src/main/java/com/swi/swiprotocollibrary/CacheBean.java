@@ -13,16 +13,22 @@ import android.os.SystemClock;
  */
 public class CacheBean {
 
-    public CacheBean(MsgCallback msgCallback,byte[] msgArray) {
+    public CacheBean(MsgCallback msgCallback, byte[] msgArray) {
         this.msgCallback = msgCallback;
         sendTime = SystemClock.elapsedRealtime();
-        this.msgArray=msgArray;
+        this.msgArray = msgArray;
+    }
+
+    public CacheBean(MsgCallback msgCallback, boolean isCycle) {
+        this.msgCallback = msgCallback;
+        this.isCycle = isCycle;
     }
 
     public MsgCallback msgCallback;
 
     public long sendTime;
 
-
     public byte[] msgArray;
+
+    public boolean isCycle;
 }

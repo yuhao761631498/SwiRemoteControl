@@ -68,9 +68,9 @@ public class SplashActivity extends BaseActivity {
             boolean mkdirs = file.mkdirs();
         }
 
-        if (GlobalVariable.UDP_SOCKET_PORT == 0) {
-            getSocketPort();
-        }
+//        if (GlobalVariable.UDP_SOCKET_PORT == 0) {
+//            getSocketPort();
+//        }
 
         handler.sendEmptyMessageDelayed(0, 2000);
     }
@@ -86,33 +86,33 @@ public class SplashActivity extends BaseActivity {
     });
 
 
-    /***************************
-     * 获取socket的端口号---xx
-     */
-    public void getSocketPort() {
-        //获取数传端口
-        for (int a = 3000; a < 9000; a++) {
-            try {
-                DatagramSocket socket = new DatagramSocket(a);
-                socket.close();
-                GlobalVariable.UDP_SOCKET_PORT = a;
-                break;
-            } catch (SocketException e) {
-                e.printStackTrace();
-            }
-        }
-        Log.e("yuhao", "分配的数传端口:" + GlobalVariable.UDP_SOCKET_PORT);
-//        GlobalVariable.UDPSocketIMGPort = 6000;
-        for (int a = 7078; a < 9000; a++) {
-            try {
-                DatagramSocket socket = new DatagramSocket(a);
-                socket.close();
-                GlobalVariable.UDP_SOCKET_IMG_PORT = a;
-                break;
-            } catch (SocketException e) {
-                e.printStackTrace();
-            }
-        }
-        Log.e("yuhao", "分配的图传端口:" + GlobalVariable.UDP_SOCKET_IMG_PORT);
-    }
+//    /***************************
+//     * 获取socket的端口号---xx
+//     */
+//    public void getSocketPort() {
+//        //获取数传端口
+//        for (int a = 3000; a < 9000; a++) {
+//            try {
+//                DatagramSocket socket = new DatagramSocket(a);
+//                socket.close();
+//                GlobalVariable.UDP_SOCKET_PORT = a;
+//                break;
+//            } catch (SocketException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        Log.e("yuhao", "分配的数传端口:" + GlobalVariable.UDP_SOCKET_PORT);
+////        GlobalVariable.UDPSocketIMGPort = 6000;
+//        for (int a = 7078; a < 9000; a++) {
+//            try {
+//                DatagramSocket socket = new DatagramSocket(a);
+//                socket.close();
+//                GlobalVariable.UDP_SOCKET_IMG_PORT = a;
+//                break;
+//            } catch (SocketException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        Log.e("yuhao", "分配的图传端口:" + GlobalVariable.UDP_SOCKET_IMG_PORT);
+//    }
 }

@@ -30,14 +30,11 @@ public abstract class BaseAck extends BaseSwiFrameBean {
     }
 
     public void decodeMsg(byte[] data, int length) {
-        frameMsgID = ByteUtils.byte2short(data, 7);
-        if (frameMsgID == MsgIdConfig.MSG_ID_AUTO_TAKEOFF) {
-            short ack = ByteUtils.byte2short(data, 12);
-            handler.sendEmptyMessage(ack);
-            byte[] load = new byte[length];
-            System.arraycopy(data, 12, load, 0, length);
-            decode(load);
-        }
+        short ack = ByteUtils.byte2short(data, 12);
+        handler.sendEmptyMessage(ack);
+        byte[] load = new byte[length];
+        System.arraycopy(data, 12, load, 0, length);
+        decode(load);
     }
 
     public abstract void decode(byte[] data);

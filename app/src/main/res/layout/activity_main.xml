@@ -11,9 +11,9 @@
         android:id="@+id/cs_video_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/black">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextureView
             android:id="@+id/texture_View"
